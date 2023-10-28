@@ -1,0 +1,52 @@
+<title>ECommerce</title>
+<!-- Favicon-->
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+<!-- Bootstrap icons-->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+<!-- Core theme CSS (includes Bootstrap)-->
+<link href="../css/styles.css" rel="stylesheet" />
+
+<nav class="navbar navbar-expand-lg sticky-top navbar-light bg-light">
+  <div class="container px-4 px-lg-5">
+      <a class="navbar-brand" href="/">ECommerce</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+              <li class="nav-item"><a class="nav-link active" aria-current="page" href="/">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="/contact">Contact Us</a></li>
+              <li class="nav-item"><a class="nav-link" href="/additem">Add Product</a></li>
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <!-- <li><a class="dropdown-item" href="#!">All Products</a></li> -->
+                      <!-- <li><hr class="dropdown-divider" /></li> -->
+                      <li><a class="dropdown-item" href="/menproducts">Men Section</a></li>
+                      <li><a class="dropdown-item" href="/womenproducts">Women Section </a></li>
+                      <li><a class="dropdown-item" href="/kidsproducts">Kids Section </a></li>
+                  </ul>
+              </li>
+          </ul>
+              <li class="nav-item dropdown btn btn-outline-dark">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-person-circle"></i>
+                    Profile
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="/profile">My Profile</a></li>
+                    <li><a class="dropdown-item" href="/login">Login </a></li>
+                    <li><a class="dropdown-item" href="/signup">Sign In </a></li>
+                    <li>
+                        <a href="#" onclick="event.preventDefault(); document.getElementById('logoutForm').submit();" class="dropdown-item">Sign Out</a>
+                        <form id="logoutForm" action="/logout" method="post" style="display: none;"></form>
+                    </li>
+
+                </ul>
+            </li>
+            <a class="btn btn-outline-dark mx-3" href="/mycart">
+                <i class="bi-cart-fill me-1"></i>
+                Cart
+            </a>
+      </div>
+  </div>
+</nav>

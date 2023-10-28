@@ -1,0 +1,58 @@
+<!-- Bootstrap icons-->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+<!-- Core theme CSS (includes Bootstrap)-->
+<link href="css/styles.css" rel="stylesheet" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<%- include('partials/header.ejs') -%>
+
+<div class="container mt-5">
+    <h1>Login</h1>
+    <% if (message) { %>
+      <div id="loginSuccessMessage" class="alert alert-success">
+        <%= message %>
+      </div>
+      <script>
+        setTimeout(() => {
+          const loginSuccessMessage = document.querySelector('#loginSuccessMessage');
+          if (loginSuccessMessage) {
+            loginSuccessMessage.remove();
+          }
+        }, 3000); // Remove message after 3 seconds
+      </script>
+    <% } %>
+    <div class="row">
+      <div class="col-sm-8">
+        <div class="card coll">
+          <div class="card-body">
+  
+            <!-- Makes POST request to /login route -->
+            <form action="/login" method="POST">
+                <div class="form-group text-center">
+                    <select class="form-select" aria-label="Default select example" name="acctype">
+                        <option selected value="buyer">Buyer</option>
+                        <option value="seller">Seller</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" name="email">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" name="password">
+                </div>
+                <button type="submit" class="btn btn-dark">Login</button>
+            </form>
+  
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  </div>
+
+  <%- include('partials/footer.ejs') -%>
+  <!-- Bootstrap core JS-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Core theme JS-->
+  <script src="./js/scripts.js"></script>
